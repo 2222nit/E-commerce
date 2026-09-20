@@ -1,0 +1,47 @@
+import React from "react";
+import Logo from "../images/logo_iizuc7.png";
+import { CgProfile } from "react-icons/cg";
+import { GoGlobe } from "react-icons/go";
+import { LuGraduationCap } from "react-icons/lu";
+import { FaRegFolder } from "react-icons/fa6";
+import { LuGithub } from "react-icons/lu";
+import { FiLinkedin } from "react-icons/fi";
+import { FaInstagram } from "react-icons/fa6";
+
+export default function Navbar() {
+  return (
+    <nav className="h-20 flex justify-center items-center text-gray-600">
+      <div className="flex items-center gap-45 shadow-xl rounded-full px-5 py-1 bg-white">
+
+
+        {/* Right */}
+        <div>
+          <img src={Logo} alt="Logo" className="h-10 w-10" />
+        </div>
+
+        {/* Middle */}
+        <div className="flex gap-3">
+          <a href="#" className="flex justify-center items-center gap-1.5 border-none rounded-full bg-black text-white py-2 px-5 ">
+            <CgProfile className="h-5 w-5 scale-125"/> Profile
+          </a>
+          <a href="#" className="flex justify-center items-center gap-1.5 border-none rounded-full py-2 px-5 hover:text-black duration-300 ">
+            <GoGlobe className="h-5 w-5 scale-125"/> Technology
+          </a>
+          <a href="#" className="flex justify-center items-center gap-1.5 border-none rounded-full py-2 px-5 hover:text-black duration-300 ">
+            <LuGraduationCap className="h-5 w-5 scale-125"/> Qualifications
+          </a>
+          <a href="#" className="flex justify-center items-center gap-1.5 border-none rounded-full py-2 px-5 hover:text-black duration-300 ">
+            <FaRegFolder className="h-5 w-5 scale-125"/> Project
+          </a>
+        </div>
+
+        {/* Left */}
+        <div className="flex gap-5 items-center">
+          <a href="#"><LuGithub className="h-6 w-6"/></a>
+          <a href="#"><FiLinkedin className="h-6 w-6"/></a>
+          <a href="#"><FaInstagram className="h-6 w-6"/></a>
+        </div>
+      </div>
+    </nav>
+  );
+}
