@@ -1,10 +1,20 @@
-import React from 'react'
-import Navbar from './components/Navbar'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./components/pages/Home";
+import BestSeller from "./components/pages/BestSeller";
+import TodaysDeals from "./components/pages/TodaysDeals";
+import Sell from "./components/pages/Sell";
 
 export default function App() {
   return (
-    <div className='bg-black h-screen'>
+    <BrowserRouter>
       <Navbar />
-    </div>
-  )
+      <Routes>
+        <Route path="/Home" element={<Home/>} />
+        <Route path="/BestSeller" element={<BestSeller/>} />
+        <Route path="/TodaysDeals" element={<TodaysDeals/>} />
+        <Route path="/Sell" element={<Sell/>} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
